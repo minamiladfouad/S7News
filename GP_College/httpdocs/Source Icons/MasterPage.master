@@ -1,0 +1,248 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="styles/layout.css" type="text/css" />
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="main">
+
+     <div class="wrapper col0" style="padding:0;margin:0;border:0;height:5px;background-color:#830509;background-image:none;">
+     </div>
+
+    <%
+       
+        
+         if (Session["Honest_login"] == "ok")
+        {
+         %>
+        <div class="wrapper col0" style="padding:0;margin:0;border:0;">
+       
+  <div id="topline">
+  
+    <ul>
+      <li><a href="default.aspx">الرئيسية</a></li>
+      <%
+          if (Session["login_type"] == "VIP")
+          {
+              %>
+              <li><a href="VIPprofile.aspx">الخاص</a></li>
+              <%
+              
+          }
+          else
+          {
+           %>
+              
+               <li><a href="userprofile.aspx">الخاص</a></li>
+             <%
+          }
+               %>
+              
+      
+      <li><a href="follow.aspx">تابع</a></li>
+      <li class="last"><a href="logout.aspx">تسجبل الخروج</a></li>
+    </ul>
+    <%
+        if (Session["login_type"] == "VIP")
+        {
+
+            Services.Services webservice = new Services.Services();
+            System.Data.DataTable notfi = new System.Data.DataTable();
+            notfi = webservice.Unseen_News(int.Parse(Session["ID"].ToString()));
+            
+           %>
+     <ul style="padding-right:450px;">
+      
+      <li>
+      <img src="images/noti1.png"  width="30" title=" اخبار لم يتم زيارتها"/>
+      
+      <ul>
+       <%
+        for (int i = 0; i < notfi.Rows.Count; i++)
+        {
+             %>
+             <li>
+             <%
+        Response.Write(" <a href=shownews.aspx?NewsID=" + notfi.Rows[i][0].ToString() + ">" + notfi.Rows[i][1].ToString() + "</a> ");
+                   
+                   %>
+              </li>
+
+             <%} %>
+
+            
+     </ul>
+     </li>
+      <li><%
+           
+        Response.Write(notfi.Rows.Count); %></li>
+    </ul>
+     <%}
+        else if (Session["login_type"] == "User")
+        {
+            Services.Services webservice = new Services.Services();
+            System.Data.DataTable notfi = new System.Data.DataTable();
+            notfi = webservice.User_Unseen_News(int.Parse(Session["ID"].ToString()),2);
+            
+         %>
+         <ul style="padding-right:450px;">
+      
+      <li>
+      <img src="images/noti1.png"  width="30" title=" اخبار لم يتم زيارتها"/>
+      <ul>
+       <%
+         for (int i = 0; i < notfi.Rows.Count; i++)
+         {
+             %>
+             <li>
+             <%
+         Response.Write(" <a href=shownews.aspx?NewsID=" + notfi.Rows[i][0].ToString() + ">" + notfi.Rows[i][1].ToString() + "</a> ");
+                   
+                   %>
+              </li>
+
+             <%} %>
+
+            
+     </ul>
+     </li>
+      <li><%
+           
+         Response.Write(notfi.Rows.Count); %></li>
+    </ul>
+    <%} %>
+    <br class="clear" />
+  </div>
+</div>
+<%}
+        else
+        { %>
+           <div class="wrapper col0" style="padding:0;margin:0;border:0;">
+           <div class="wrapper" style="padding:0;margin-bottom:0;border:0;">
+  <div class="container" style="padding:0;margin-bottom:0;border:0;">
+           
+ 
+    
+    <table dir="rtl"  style=" border:0; height:40px; float:right;height:40px; border-collapse:collapse;" cellpadding="0" cellpadding="0">
+    <tr>
+    <td style="width:31px;background-image:url('images/cell1.png');background-repeat:no-repeat">
+   
+    </td>
+    <td style="background-image:url('images/cell_center.png');background-repeat:repeat-x;">
+    <a href="Login.aspx" style="background-color:transparent;background-image:none;">
+    تسجيل الدخول
+    </a>
+    </td>
+    <td style="width:31px;background-image:url('images/cell2.png');background-repeat:no-repeat">
+   
+    </td>
+    <td style="width:20px;text-align:center">|</td>
+    <td>
+    <a href="UserRegistartion.aspx" style="background-color:transparent;background-image:none;">
+    مستخدم جديد
+  </a> 
+   </td>
+    
+    <td style="width:20px;text-align:center">|</td>
+    <td>
+    <a href="follow.aspx" style="background-color:transparent;background-image:none;">
+    متابعة المشاهير
+  </a> 
+   </td>
+     <td style="width:20px;text-align:center">|</td>
+     <td>
+     <a href="Benefits.aspx" style="background-color:transparent;background-image:none;">
+    فؤائد الاستخدام
+   </a>
+    </td>
+    </tr>
+    <tr>
+    <td style="background-color:transparent;background-image:none;">
+    </td>
+    </tr>
+    </table>
+    
+    </div>
+    </div>
+   
+   
+    
+    <br class="clear" />
+    
+  
+  
+</div>
+<%
+} %>
+
+<!-- ####################################################################################################### -->
+<div class="wrapper">
+  <div class="wrapper" style="background-image: url('styles/bg_3.png');padding:0; border:0;margin:0">
+  <div id="header">
+      <div class="fl_left"><a href="default.aspx"><img src="images/logo.png" alt="" height="95" /></a></div>
+	 
+    <br class="clear" />
+
+  </div>
+</div>
+
+<!-- ####################################################################################################### -->
+
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+     
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="footer">
+    <!-- ####################################################################################################### -->
+<div class="wrapper">
+  <div id="socialise">
+    <ul>
+      <li><a href="http://www.facebook.com/HonestGate"><img src="images/facebook.png" alt="" width="114"; height="115" /><span>Facebook</span></a></li>
+      <li><a href="#"><img src="images/rss.png" alt="" width="113"; height="114" /><span>FeedBurner</span></a></li>
+      <li class="last"><a href="#"><img src="images/twitter.png" width="92"; height="115" alt="" /><span>Twitter</span></a></li>
+    </ul>
+    <div id="newsletter">
+      <h2>للتواصل معنا</h2>
+      <p>من فضلك ادخل البريد الالكتروني الخاص بك والرسالة المراد ارسالها.</p>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Digital Newsletter</legend>
+          <div class="fl_left">
+            <input type="text" value="البريد الالكتروني&hellip;"  onfocus="this.value=(this.value=='البريد الالكتروني&hellip;')? '' : this.value ;" />
+            <input type="text" value="الرسالة&hellip;"  onfocus="this.value=(this.value=='الرسالة&hellip;')? '' : this.value ;" />
+          </div>
+          <div class="fl_right">
+            <input type="submit" name="newsletter_go" id="newsletter_go" value="&raquo;" />
+          </div>
+        </fieldset>
+              <p>For VIP registration <a href="VIPRegistration.aspx">click here &raquo;</a>.</p>
+
+      </form>
+      
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+
+<!-- ####################################################################################################### -->
+<div class="wrapper col8">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2012 - All Rights Reserved - <a href="http://www.facebook.com/HonestGate">Honest Gate</a> ملحوظة : الموقع تحت التجريب وكل التعليقات المدرجة به غير رسمية</p>
+    <p class="fl_right">Join us <a href="http://www.facebook.com/HonestGate" title="Honest Gate team">Link</a></p>
+    <br class="clear" />
+  </div>
+</div>
+    
+    </div>
+    </form>
+</body>
+</html>
