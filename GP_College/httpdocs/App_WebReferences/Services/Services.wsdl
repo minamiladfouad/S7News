@@ -1,0 +1,2444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://portal.s7news.net/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://portal.s7news.net/AbstractTypes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://portal.s7news.net/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://portal.s7news.net/">
+      <s:element name="InsertNews">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="New" type="tns:ArrayOfNews" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfNews">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="News" nillable="true" type="tns:News" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="News" />
+      <s:element name="InsertNewsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Category_News">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Cat" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Category_NewsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Category_NewsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommentedNews">
+        <s:complexType />
+      </s:element>
+      <s:element name="CommentedNewsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CommentedNewsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNews">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NewsID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoginResult" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserRegister">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pass" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SecretQ" type="s:short" />
+            <s:element minOccurs="0" maxOccurs="1" name="SecretA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="USex" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="BirthDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="RegisterDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserRegisterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserRegisterResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VIPRegister">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FullName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="VSex" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="PhoneNo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Vaddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Job" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BirthDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pass" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SecretQ" type="s:short" />
+            <s:element minOccurs="0" maxOccurs="1" name="SecretA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RegisterDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VIPRegisterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VIPRegisterResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_IDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Get_IDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_Comment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NewsID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="VID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CommentDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="FeedBack" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_CommentResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="FollowedVIP_News">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserType" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FollowedVIP_NewsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FollowedVIP_NewsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Follow_VIP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="VID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserType" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Follow_VIPResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Mining_Table">
+        <s:complexType />
+      </s:element>
+      <s:element name="Mining_TableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mining_TableResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Evaluation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SRC" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EvaluationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EvaluationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_UserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_UserInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_UserInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApproveVIP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mining" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApproveVIPResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Most_Viewed">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="N" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Most_ViewedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Most_ViewedResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_All_VIPs">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_All_VIPsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_All_VIPsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_VIP_News">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_VIP_NewsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_VIP_NewsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mobile_VIP_News">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mobile_VIP_NewsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mobile_VIP_NewsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Followed_VIPs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserType" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Followed_VIPsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Followed_VIPsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Related_VID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Related_VIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Related_VIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Edit_Private_Security">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:short" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pass" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SecQ" type="s:short" />
+            <s:element minOccurs="0" maxOccurs="1" name="SecA" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Edit_Private_SecurityResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Edit_VIP_Info">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="FullName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PhoneNo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Vaddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Job" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Edit_VIP_InfoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Unfollow">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserType" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnfollowResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Unseen_News">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Unseen_NewsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Unseen_NewsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="User_Unseen_News">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserType" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="User_Unseen_NewsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User_Unseen_NewsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NoComment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NoCommentResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Read">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserType" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReadResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UploadPhoto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Photo" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserType" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadPhotoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="short" type="s:short" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="int" type="s:int" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+    <s:schema targetNamespace="http://portal.s7news.net/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InsertNewsSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertNews" />
+  </wsdl:message>
+  <wsdl:message name="InsertNewsSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Category_NewsSoapIn">
+    <wsdl:part name="parameters" element="tns:Category_News" />
+  </wsdl:message>
+  <wsdl:message name="Category_NewsSoapOut">
+    <wsdl:part name="parameters" element="tns:Category_NewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommentedNewsSoapIn">
+    <wsdl:part name="parameters" element="tns:CommentedNews" />
+  </wsdl:message>
+  <wsdl:message name="CommentedNewsSoapOut">
+    <wsdl:part name="parameters" element="tns:CommentedNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNews" />
+  </wsdl:message>
+  <wsdl:message name="GetNewsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserRegisterSoapIn">
+    <wsdl:part name="parameters" element="tns:UserRegister" />
+  </wsdl:message>
+  <wsdl:message name="UserRegisterSoapOut">
+    <wsdl:part name="parameters" element="tns:UserRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="VIPRegisterSoapIn">
+    <wsdl:part name="parameters" element="tns:VIPRegister" />
+  </wsdl:message>
+  <wsdl:message name="VIPRegisterSoapOut">
+    <wsdl:part name="parameters" element="tns:VIPRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_IDSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ID" />
+  </wsdl:message>
+  <wsdl:message name="Get_IDSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="Add_CommentSoapIn">
+    <wsdl:part name="parameters" element="tns:Add_Comment" />
+  </wsdl:message>
+  <wsdl:message name="Add_CommentSoapOut">
+    <wsdl:part name="parameters" element="tns:Add_CommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="FollowedVIP_NewsSoapIn">
+    <wsdl:part name="parameters" element="tns:FollowedVIP_News" />
+  </wsdl:message>
+  <wsdl:message name="FollowedVIP_NewsSoapOut">
+    <wsdl:part name="parameters" element="tns:FollowedVIP_NewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Follow_VIPSoapIn">
+    <wsdl:part name="parameters" element="tns:Follow_VIP" />
+  </wsdl:message>
+  <wsdl:message name="Follow_VIPSoapOut">
+    <wsdl:part name="parameters" element="tns:Follow_VIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="Mining_TableSoapIn">
+    <wsdl:part name="parameters" element="tns:Mining_Table" />
+  </wsdl:message>
+  <wsdl:message name="Mining_TableSoapOut">
+    <wsdl:part name="parameters" element="tns:Mining_TableResponse" />
+  </wsdl:message>
+  <wsdl:message name="EvaluationSoapIn">
+    <wsdl:part name="parameters" element="tns:Evaluation" />
+  </wsdl:message>
+  <wsdl:message name="EvaluationSoapOut">
+    <wsdl:part name="parameters" element="tns:EvaluationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_UserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_UserInfo" />
+  </wsdl:message>
+  <wsdl:message name="Get_UserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_UserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApproveVIPSoapIn">
+    <wsdl:part name="parameters" element="tns:ApproveVIP" />
+  </wsdl:message>
+  <wsdl:message name="ApproveVIPSoapOut">
+    <wsdl:part name="parameters" element="tns:ApproveVIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="Most_ViewedSoapIn">
+    <wsdl:part name="parameters" element="tns:Most_Viewed" />
+  </wsdl:message>
+  <wsdl:message name="Most_ViewedSoapOut">
+    <wsdl:part name="parameters" element="tns:Most_ViewedResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_All_VIPsSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_All_VIPs" />
+  </wsdl:message>
+  <wsdl:message name="Get_All_VIPsSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_All_VIPsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_VIP_NewsSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_VIP_News" />
+  </wsdl:message>
+  <wsdl:message name="Get_VIP_NewsSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_VIP_NewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Mobile_VIP_NewsSoapIn">
+    <wsdl:part name="parameters" element="tns:Mobile_VIP_News" />
+  </wsdl:message>
+  <wsdl:message name="Mobile_VIP_NewsSoapOut">
+    <wsdl:part name="parameters" element="tns:Mobile_VIP_NewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Followed_VIPsSoapIn">
+    <wsdl:part name="parameters" element="tns:Followed_VIPs" />
+  </wsdl:message>
+  <wsdl:message name="Followed_VIPsSoapOut">
+    <wsdl:part name="parameters" element="tns:Followed_VIPsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Related_VIDSoapIn">
+    <wsdl:part name="parameters" element="tns:Related_VID" />
+  </wsdl:message>
+  <wsdl:message name="Related_VIDSoapOut">
+    <wsdl:part name="parameters" element="tns:Related_VIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="Edit_Private_SecuritySoapIn">
+    <wsdl:part name="parameters" element="tns:Edit_Private_Security" />
+  </wsdl:message>
+  <wsdl:message name="Edit_Private_SecuritySoapOut">
+    <wsdl:part name="parameters" element="tns:Edit_Private_SecurityResponse" />
+  </wsdl:message>
+  <wsdl:message name="Edit_VIP_InfoSoapIn">
+    <wsdl:part name="parameters" element="tns:Edit_VIP_Info" />
+  </wsdl:message>
+  <wsdl:message name="Edit_VIP_InfoSoapOut">
+    <wsdl:part name="parameters" element="tns:Edit_VIP_InfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UnfollowSoapIn">
+    <wsdl:part name="parameters" element="tns:Unfollow" />
+  </wsdl:message>
+  <wsdl:message name="UnfollowSoapOut">
+    <wsdl:part name="parameters" element="tns:UnfollowResponse" />
+  </wsdl:message>
+  <wsdl:message name="Unseen_NewsSoapIn">
+    <wsdl:part name="parameters" element="tns:Unseen_News" />
+  </wsdl:message>
+  <wsdl:message name="Unseen_NewsSoapOut">
+    <wsdl:part name="parameters" element="tns:Unseen_NewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="User_Unseen_NewsSoapIn">
+    <wsdl:part name="parameters" element="tns:User_Unseen_News" />
+  </wsdl:message>
+  <wsdl:message name="User_Unseen_NewsSoapOut">
+    <wsdl:part name="parameters" element="tns:User_Unseen_NewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="NoCommentSoapIn">
+    <wsdl:part name="parameters" element="tns:NoComment" />
+  </wsdl:message>
+  <wsdl:message name="NoCommentSoapOut">
+    <wsdl:part name="parameters" element="tns:NoCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReadSoapIn">
+    <wsdl:part name="parameters" element="tns:Read" />
+  </wsdl:message>
+  <wsdl:message name="ReadSoapOut">
+    <wsdl:part name="parameters" element="tns:ReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadPhotoSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadPhoto" />
+  </wsdl:message>
+  <wsdl:message name="UploadPhotoSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadPhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Category_NewsHttpGetIn">
+    <wsdl:part name="Cat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Category_NewsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="CommentedNewsHttpGetIn" />
+  <wsdl:message name="CommentedNewsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetNewsHttpGetIn">
+    <wsdl:part name="NewsID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNewsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpGetIn">
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Pass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:short" />
+  </wsdl:message>
+  <wsdl:message name="UserRegisterHttpGetIn">
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Pass" type="s:string" />
+    <wsdl:part name="SecretQ" type="s:string" />
+    <wsdl:part name="SecretA" type="s:string" />
+    <wsdl:part name="USex" type="s:string" />
+    <wsdl:part name="BirthDate" type="s:string" />
+    <wsdl:part name="RegisterDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UserRegisterHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="VIPRegisterHttpGetIn">
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="FullName" type="s:string" />
+    <wsdl:part name="VSex" type="s:string" />
+    <wsdl:part name="PhoneNo" type="s:string" />
+    <wsdl:part name="Vaddress" type="s:string" />
+    <wsdl:part name="Job" type="s:string" />
+    <wsdl:part name="BirthDate" type="s:string" />
+    <wsdl:part name="Pass" type="s:string" />
+    <wsdl:part name="SecretQ" type="s:string" />
+    <wsdl:part name="SecretA" type="s:string" />
+    <wsdl:part name="RegisterDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VIPRegisterHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="Get_IDHttpGetIn">
+    <wsdl:part name="mail" type="s:string" />
+    <wsdl:part name="type" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_IDHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="Add_CommentHttpGetIn">
+    <wsdl:part name="NewsID" type="s:string" />
+    <wsdl:part name="VID" type="s:string" />
+    <wsdl:part name="Comment" type="s:string" />
+    <wsdl:part name="CommentDate" type="s:string" />
+    <wsdl:part name="FeedBack" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Add_CommentHttpGetOut" />
+  <wsdl:message name="FollowedVIP_NewsHttpGetIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="UserType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FollowedVIP_NewsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="Follow_VIPHttpGetIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="VID" type="s:string" />
+    <wsdl:part name="UserType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Follow_VIPHttpGetOut" />
+  <wsdl:message name="Mining_TableHttpGetIn" />
+  <wsdl:message name="Mining_TableHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="EvaluationHttpGetIn">
+    <wsdl:part name="SRC" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EvaluationHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="Get_UserInfoHttpGetIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="type" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_UserInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="ApproveVIPHttpGetIn">
+    <wsdl:part name="VID" type="s:string" />
+    <wsdl:part name="Mining" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ApproveVIPHttpGetOut" />
+  <wsdl:message name="Most_ViewedHttpGetIn">
+    <wsdl:part name="N" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Most_ViewedHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="Get_All_VIPsHttpGetIn" />
+  <wsdl:message name="Get_All_VIPsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="Get_VIP_NewsHttpGetIn">
+    <wsdl:part name="VID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_VIP_NewsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="Mobile_VIP_NewsHttpGetIn">
+    <wsdl:part name="VID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Mobile_VIP_NewsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Followed_VIPsHttpGetIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="UserType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Followed_VIPsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="Related_VIDHttpGetIn">
+    <wsdl:part name="NID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Related_VIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="Edit_Private_SecurityHttpGetIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="type" type="s:string" />
+    <wsdl:part name="Name" type="s:string" />
+    <wsdl:part name="Pass" type="s:string" />
+    <wsdl:part name="SecQ" type="s:string" />
+    <wsdl:part name="SecA" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Edit_Private_SecurityHttpGetOut" />
+  <wsdl:message name="Edit_VIP_InfoHttpGetIn">
+    <wsdl:part name="VID" type="s:string" />
+    <wsdl:part name="FullName" type="s:string" />
+    <wsdl:part name="PhoneNo" type="s:string" />
+    <wsdl:part name="Vaddress" type="s:string" />
+    <wsdl:part name="Job" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Edit_VIP_InfoHttpGetOut" />
+  <wsdl:message name="UnfollowHttpGetIn">
+    <wsdl:part name="VID" type="s:string" />
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="UserType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UnfollowHttpGetOut" />
+  <wsdl:message name="Unseen_NewsHttpGetIn">
+    <wsdl:part name="VID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Unseen_NewsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="User_Unseen_NewsHttpGetIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="UserType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="User_Unseen_NewsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="NoCommentHttpGetIn">
+    <wsdl:part name="NID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NoCommentHttpGetOut" />
+  <wsdl:message name="ReadHttpGetIn">
+    <wsdl:part name="NID" type="s:string" />
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="UserType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReadHttpGetOut" />
+  <wsdl:message name="UploadPhotoHttpGetIn">
+    <wsdl:part name="Photo" type="s1:StringArray" />
+    <wsdl:part name="UserType" type="s:string" />
+    <wsdl:part name="UserID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadPhotoHttpGetOut" />
+  <wsdl:message name="Category_NewsHttpPostIn">
+    <wsdl:part name="Cat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Category_NewsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="CommentedNewsHttpPostIn" />
+  <wsdl:message name="CommentedNewsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetNewsHttpPostIn">
+    <wsdl:part name="NewsID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNewsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpPostIn">
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Pass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:short" />
+  </wsdl:message>
+  <wsdl:message name="UserRegisterHttpPostIn">
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Pass" type="s:string" />
+    <wsdl:part name="SecretQ" type="s:string" />
+    <wsdl:part name="SecretA" type="s:string" />
+    <wsdl:part name="USex" type="s:string" />
+    <wsdl:part name="BirthDate" type="s:string" />
+    <wsdl:part name="RegisterDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UserRegisterHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="VIPRegisterHttpPostIn">
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="FullName" type="s:string" />
+    <wsdl:part name="VSex" type="s:string" />
+    <wsdl:part name="PhoneNo" type="s:string" />
+    <wsdl:part name="Vaddress" type="s:string" />
+    <wsdl:part name="Job" type="s:string" />
+    <wsdl:part name="BirthDate" type="s:string" />
+    <wsdl:part name="Pass" type="s:string" />
+    <wsdl:part name="SecretQ" type="s:string" />
+    <wsdl:part name="SecretA" type="s:string" />
+    <wsdl:part name="RegisterDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VIPRegisterHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="Get_IDHttpPostIn">
+    <wsdl:part name="mail" type="s:string" />
+    <wsdl:part name="type" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_IDHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="Add_CommentHttpPostIn">
+    <wsdl:part name="NewsID" type="s:string" />
+    <wsdl:part name="VID" type="s:string" />
+    <wsdl:part name="Comment" type="s:string" />
+    <wsdl:part name="CommentDate" type="s:string" />
+    <wsdl:part name="FeedBack" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Add_CommentHttpPostOut" />
+  <wsdl:message name="FollowedVIP_NewsHttpPostIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="UserType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FollowedVIP_NewsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="Follow_VIPHttpPostIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="VID" type="s:string" />
+    <wsdl:part name="UserType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Follow_VIPHttpPostOut" />
+  <wsdl:message name="Mining_TableHttpPostIn" />
+  <wsdl:message name="Mining_TableHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="EvaluationHttpPostIn">
+    <wsdl:part name="SRC" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EvaluationHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="Get_UserInfoHttpPostIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="type" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_UserInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="ApproveVIPHttpPostIn">
+    <wsdl:part name="VID" type="s:string" />
+    <wsdl:part name="Mining" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ApproveVIPHttpPostOut" />
+  <wsdl:message name="Most_ViewedHttpPostIn">
+    <wsdl:part name="N" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Most_ViewedHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="Get_All_VIPsHttpPostIn" />
+  <wsdl:message name="Get_All_VIPsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="Get_VIP_NewsHttpPostIn">
+    <wsdl:part name="VID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_VIP_NewsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="Mobile_VIP_NewsHttpPostIn">
+    <wsdl:part name="VID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Mobile_VIP_NewsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Followed_VIPsHttpPostIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="UserType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Followed_VIPsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="Related_VIDHttpPostIn">
+    <wsdl:part name="NID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Related_VIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="Edit_Private_SecurityHttpPostIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="type" type="s:string" />
+    <wsdl:part name="Name" type="s:string" />
+    <wsdl:part name="Pass" type="s:string" />
+    <wsdl:part name="SecQ" type="s:string" />
+    <wsdl:part name="SecA" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Edit_Private_SecurityHttpPostOut" />
+  <wsdl:message name="Edit_VIP_InfoHttpPostIn">
+    <wsdl:part name="VID" type="s:string" />
+    <wsdl:part name="FullName" type="s:string" />
+    <wsdl:part name="PhoneNo" type="s:string" />
+    <wsdl:part name="Vaddress" type="s:string" />
+    <wsdl:part name="Job" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Edit_VIP_InfoHttpPostOut" />
+  <wsdl:message name="UnfollowHttpPostIn">
+    <wsdl:part name="VID" type="s:string" />
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="UserType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UnfollowHttpPostOut" />
+  <wsdl:message name="Unseen_NewsHttpPostIn">
+    <wsdl:part name="VID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Unseen_NewsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="User_Unseen_NewsHttpPostIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="UserType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="User_Unseen_NewsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="NoCommentHttpPostIn">
+    <wsdl:part name="NID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NoCommentHttpPostOut" />
+  <wsdl:message name="ReadHttpPostIn">
+    <wsdl:part name="NID" type="s:string" />
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="UserType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReadHttpPostOut" />
+  <wsdl:message name="UploadPhotoHttpPostIn">
+    <wsdl:part name="Photo" type="s1:StringArray" />
+    <wsdl:part name="UserType" type="s:string" />
+    <wsdl:part name="UserID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadPhotoHttpPostOut" />
+  <wsdl:portType name="ServicesSoap">
+    <wsdl:operation name="InsertNews">
+      <wsdl:input message="tns:InsertNewsSoapIn" />
+      <wsdl:output message="tns:InsertNewsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Category_News">
+      <wsdl:input message="tns:Category_NewsSoapIn" />
+      <wsdl:output message="tns:Category_NewsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommentedNews">
+      <wsdl:input message="tns:CommentedNewsSoapIn" />
+      <wsdl:output message="tns:CommentedNewsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNews">
+      <wsdl:input message="tns:GetNewsSoapIn" />
+      <wsdl:output message="tns:GetNewsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRegister">
+      <wsdl:input message="tns:UserRegisterSoapIn" />
+      <wsdl:output message="tns:UserRegisterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VIPRegister">
+      <wsdl:input message="tns:VIPRegisterSoapIn" />
+      <wsdl:output message="tns:VIPRegisterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ID">
+      <wsdl:input message="tns:Get_IDSoapIn" />
+      <wsdl:output message="tns:Get_IDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_Comment">
+      <wsdl:input message="tns:Add_CommentSoapIn" />
+      <wsdl:output message="tns:Add_CommentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FollowedVIP_News">
+      <wsdl:input message="tns:FollowedVIP_NewsSoapIn" />
+      <wsdl:output message="tns:FollowedVIP_NewsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Follow_VIP">
+      <wsdl:input message="tns:Follow_VIPSoapIn" />
+      <wsdl:output message="tns:Follow_VIPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Mining_Table">
+      <wsdl:input message="tns:Mining_TableSoapIn" />
+      <wsdl:output message="tns:Mining_TableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Evaluation">
+      <wsdl:input message="tns:EvaluationSoapIn" />
+      <wsdl:output message="tns:EvaluationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_UserInfo">
+      <wsdl:input message="tns:Get_UserInfoSoapIn" />
+      <wsdl:output message="tns:Get_UserInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApproveVIP">
+      <wsdl:input message="tns:ApproveVIPSoapIn" />
+      <wsdl:output message="tns:ApproveVIPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Most_Viewed">
+      <wsdl:input message="tns:Most_ViewedSoapIn" />
+      <wsdl:output message="tns:Most_ViewedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_All_VIPs">
+      <wsdl:input message="tns:Get_All_VIPsSoapIn" />
+      <wsdl:output message="tns:Get_All_VIPsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_VIP_News">
+      <wsdl:input message="tns:Get_VIP_NewsSoapIn" />
+      <wsdl:output message="tns:Get_VIP_NewsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_VIP_News">
+      <wsdl:input message="tns:Mobile_VIP_NewsSoapIn" />
+      <wsdl:output message="tns:Mobile_VIP_NewsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Followed_VIPs">
+      <wsdl:input message="tns:Followed_VIPsSoapIn" />
+      <wsdl:output message="tns:Followed_VIPsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Related_VID">
+      <wsdl:input message="tns:Related_VIDSoapIn" />
+      <wsdl:output message="tns:Related_VIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Edit_Private_Security">
+      <wsdl:input message="tns:Edit_Private_SecuritySoapIn" />
+      <wsdl:output message="tns:Edit_Private_SecuritySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Edit_VIP_Info">
+      <wsdl:input message="tns:Edit_VIP_InfoSoapIn" />
+      <wsdl:output message="tns:Edit_VIP_InfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Unfollow">
+      <wsdl:input message="tns:UnfollowSoapIn" />
+      <wsdl:output message="tns:UnfollowSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Unseen_News">
+      <wsdl:input message="tns:Unseen_NewsSoapIn" />
+      <wsdl:output message="tns:Unseen_NewsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="User_Unseen_News">
+      <wsdl:input message="tns:User_Unseen_NewsSoapIn" />
+      <wsdl:output message="tns:User_Unseen_NewsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NoComment">
+      <wsdl:input message="tns:NoCommentSoapIn" />
+      <wsdl:output message="tns:NoCommentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Read">
+      <wsdl:input message="tns:ReadSoapIn" />
+      <wsdl:output message="tns:ReadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadPhoto">
+      <wsdl:input message="tns:UploadPhotoSoapIn" />
+      <wsdl:output message="tns:UploadPhotoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServicesHttpGet">
+    <wsdl:operation name="Category_News">
+      <wsdl:input message="tns:Category_NewsHttpGetIn" />
+      <wsdl:output message="tns:Category_NewsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommentedNews">
+      <wsdl:input message="tns:CommentedNewsHttpGetIn" />
+      <wsdl:output message="tns:CommentedNewsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNews">
+      <wsdl:input message="tns:GetNewsHttpGetIn" />
+      <wsdl:output message="tns:GetNewsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginHttpGetIn" />
+      <wsdl:output message="tns:LoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRegister">
+      <wsdl:input message="tns:UserRegisterHttpGetIn" />
+      <wsdl:output message="tns:UserRegisterHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VIPRegister">
+      <wsdl:input message="tns:VIPRegisterHttpGetIn" />
+      <wsdl:output message="tns:VIPRegisterHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ID">
+      <wsdl:input message="tns:Get_IDHttpGetIn" />
+      <wsdl:output message="tns:Get_IDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_Comment">
+      <wsdl:input message="tns:Add_CommentHttpGetIn" />
+      <wsdl:output message="tns:Add_CommentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FollowedVIP_News">
+      <wsdl:input message="tns:FollowedVIP_NewsHttpGetIn" />
+      <wsdl:output message="tns:FollowedVIP_NewsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Follow_VIP">
+      <wsdl:input message="tns:Follow_VIPHttpGetIn" />
+      <wsdl:output message="tns:Follow_VIPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Mining_Table">
+      <wsdl:input message="tns:Mining_TableHttpGetIn" />
+      <wsdl:output message="tns:Mining_TableHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Evaluation">
+      <wsdl:input message="tns:EvaluationHttpGetIn" />
+      <wsdl:output message="tns:EvaluationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_UserInfo">
+      <wsdl:input message="tns:Get_UserInfoHttpGetIn" />
+      <wsdl:output message="tns:Get_UserInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApproveVIP">
+      <wsdl:input message="tns:ApproveVIPHttpGetIn" />
+      <wsdl:output message="tns:ApproveVIPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Most_Viewed">
+      <wsdl:input message="tns:Most_ViewedHttpGetIn" />
+      <wsdl:output message="tns:Most_ViewedHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_All_VIPs">
+      <wsdl:input message="tns:Get_All_VIPsHttpGetIn" />
+      <wsdl:output message="tns:Get_All_VIPsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_VIP_News">
+      <wsdl:input message="tns:Get_VIP_NewsHttpGetIn" />
+      <wsdl:output message="tns:Get_VIP_NewsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_VIP_News">
+      <wsdl:input message="tns:Mobile_VIP_NewsHttpGetIn" />
+      <wsdl:output message="tns:Mobile_VIP_NewsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Followed_VIPs">
+      <wsdl:input message="tns:Followed_VIPsHttpGetIn" />
+      <wsdl:output message="tns:Followed_VIPsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Related_VID">
+      <wsdl:input message="tns:Related_VIDHttpGetIn" />
+      <wsdl:output message="tns:Related_VIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Edit_Private_Security">
+      <wsdl:input message="tns:Edit_Private_SecurityHttpGetIn" />
+      <wsdl:output message="tns:Edit_Private_SecurityHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Edit_VIP_Info">
+      <wsdl:input message="tns:Edit_VIP_InfoHttpGetIn" />
+      <wsdl:output message="tns:Edit_VIP_InfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Unfollow">
+      <wsdl:input message="tns:UnfollowHttpGetIn" />
+      <wsdl:output message="tns:UnfollowHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Unseen_News">
+      <wsdl:input message="tns:Unseen_NewsHttpGetIn" />
+      <wsdl:output message="tns:Unseen_NewsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="User_Unseen_News">
+      <wsdl:input message="tns:User_Unseen_NewsHttpGetIn" />
+      <wsdl:output message="tns:User_Unseen_NewsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NoComment">
+      <wsdl:input message="tns:NoCommentHttpGetIn" />
+      <wsdl:output message="tns:NoCommentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Read">
+      <wsdl:input message="tns:ReadHttpGetIn" />
+      <wsdl:output message="tns:ReadHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadPhoto">
+      <wsdl:input message="tns:UploadPhotoHttpGetIn" />
+      <wsdl:output message="tns:UploadPhotoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServicesHttpPost">
+    <wsdl:operation name="Category_News">
+      <wsdl:input message="tns:Category_NewsHttpPostIn" />
+      <wsdl:output message="tns:Category_NewsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommentedNews">
+      <wsdl:input message="tns:CommentedNewsHttpPostIn" />
+      <wsdl:output message="tns:CommentedNewsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNews">
+      <wsdl:input message="tns:GetNewsHttpPostIn" />
+      <wsdl:output message="tns:GetNewsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginHttpPostIn" />
+      <wsdl:output message="tns:LoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRegister">
+      <wsdl:input message="tns:UserRegisterHttpPostIn" />
+      <wsdl:output message="tns:UserRegisterHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VIPRegister">
+      <wsdl:input message="tns:VIPRegisterHttpPostIn" />
+      <wsdl:output message="tns:VIPRegisterHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ID">
+      <wsdl:input message="tns:Get_IDHttpPostIn" />
+      <wsdl:output message="tns:Get_IDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_Comment">
+      <wsdl:input message="tns:Add_CommentHttpPostIn" />
+      <wsdl:output message="tns:Add_CommentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FollowedVIP_News">
+      <wsdl:input message="tns:FollowedVIP_NewsHttpPostIn" />
+      <wsdl:output message="tns:FollowedVIP_NewsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Follow_VIP">
+      <wsdl:input message="tns:Follow_VIPHttpPostIn" />
+      <wsdl:output message="tns:Follow_VIPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Mining_Table">
+      <wsdl:input message="tns:Mining_TableHttpPostIn" />
+      <wsdl:output message="tns:Mining_TableHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Evaluation">
+      <wsdl:input message="tns:EvaluationHttpPostIn" />
+      <wsdl:output message="tns:EvaluationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_UserInfo">
+      <wsdl:input message="tns:Get_UserInfoHttpPostIn" />
+      <wsdl:output message="tns:Get_UserInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApproveVIP">
+      <wsdl:input message="tns:ApproveVIPHttpPostIn" />
+      <wsdl:output message="tns:ApproveVIPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Most_Viewed">
+      <wsdl:input message="tns:Most_ViewedHttpPostIn" />
+      <wsdl:output message="tns:Most_ViewedHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_All_VIPs">
+      <wsdl:input message="tns:Get_All_VIPsHttpPostIn" />
+      <wsdl:output message="tns:Get_All_VIPsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_VIP_News">
+      <wsdl:input message="tns:Get_VIP_NewsHttpPostIn" />
+      <wsdl:output message="tns:Get_VIP_NewsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_VIP_News">
+      <wsdl:input message="tns:Mobile_VIP_NewsHttpPostIn" />
+      <wsdl:output message="tns:Mobile_VIP_NewsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Followed_VIPs">
+      <wsdl:input message="tns:Followed_VIPsHttpPostIn" />
+      <wsdl:output message="tns:Followed_VIPsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Related_VID">
+      <wsdl:input message="tns:Related_VIDHttpPostIn" />
+      <wsdl:output message="tns:Related_VIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Edit_Private_Security">
+      <wsdl:input message="tns:Edit_Private_SecurityHttpPostIn" />
+      <wsdl:output message="tns:Edit_Private_SecurityHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Edit_VIP_Info">
+      <wsdl:input message="tns:Edit_VIP_InfoHttpPostIn" />
+      <wsdl:output message="tns:Edit_VIP_InfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Unfollow">
+      <wsdl:input message="tns:UnfollowHttpPostIn" />
+      <wsdl:output message="tns:UnfollowHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Unseen_News">
+      <wsdl:input message="tns:Unseen_NewsHttpPostIn" />
+      <wsdl:output message="tns:Unseen_NewsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="User_Unseen_News">
+      <wsdl:input message="tns:User_Unseen_NewsHttpPostIn" />
+      <wsdl:output message="tns:User_Unseen_NewsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NoComment">
+      <wsdl:input message="tns:NoCommentHttpPostIn" />
+      <wsdl:output message="tns:NoCommentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Read">
+      <wsdl:input message="tns:ReadHttpPostIn" />
+      <wsdl:output message="tns:ReadHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadPhoto">
+      <wsdl:input message="tns:UploadPhotoHttpPostIn" />
+      <wsdl:output message="tns:UploadPhotoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicesSoap" type="tns:ServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertNews">
+      <soap:operation soapAction="http://portal.s7news.net/InsertNews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Category_News">
+      <soap:operation soapAction="http://portal.s7news.net/Category_News" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommentedNews">
+      <soap:operation soapAction="http://portal.s7news.net/CommentedNews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNews">
+      <soap:operation soapAction="http://portal.s7news.net/GetNews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://portal.s7news.net/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRegister">
+      <soap:operation soapAction="http://portal.s7news.net/UserRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VIPRegister">
+      <soap:operation soapAction="http://portal.s7news.net/VIPRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ID">
+      <soap:operation soapAction="http://portal.s7news.net/Get_ID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_Comment">
+      <soap:operation soapAction="http://portal.s7news.net/Add_Comment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FollowedVIP_News">
+      <soap:operation soapAction="http://portal.s7news.net/FollowedVIP_News" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Follow_VIP">
+      <soap:operation soapAction="http://portal.s7news.net/Follow_VIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mining_Table">
+      <soap:operation soapAction="http://portal.s7news.net/Mining_Table" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Evaluation">
+      <soap:operation soapAction="http://portal.s7news.net/Evaluation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_UserInfo">
+      <soap:operation soapAction="http://portal.s7news.net/Get_UserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApproveVIP">
+      <soap:operation soapAction="http://portal.s7news.net/ApproveVIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Most_Viewed">
+      <soap:operation soapAction="http://portal.s7news.net/Most_Viewed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_All_VIPs">
+      <soap:operation soapAction="http://portal.s7news.net/Get_All_VIPs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_VIP_News">
+      <soap:operation soapAction="http://portal.s7news.net/Get_VIP_News" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_VIP_News">
+      <soap:operation soapAction="http://portal.s7news.net/Mobile_VIP_News" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Followed_VIPs">
+      <soap:operation soapAction="http://portal.s7news.net/Followed_VIPs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Related_VID">
+      <soap:operation soapAction="http://portal.s7news.net/Related_VID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Edit_Private_Security">
+      <soap:operation soapAction="http://portal.s7news.net/Edit_Private_Security" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Edit_VIP_Info">
+      <soap:operation soapAction="http://portal.s7news.net/Edit_VIP_Info" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Unfollow">
+      <soap:operation soapAction="http://portal.s7news.net/Unfollow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Unseen_News">
+      <soap:operation soapAction="http://portal.s7news.net/Unseen_News" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="User_Unseen_News">
+      <soap:operation soapAction="http://portal.s7news.net/User_Unseen_News" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NoComment">
+      <soap:operation soapAction="http://portal.s7news.net/NoComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Read">
+      <soap:operation soapAction="http://portal.s7news.net/Read" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadPhoto">
+      <soap:operation soapAction="http://portal.s7news.net/UploadPhoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicesSoap12" type="tns:ServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertNews">
+      <soap12:operation soapAction="http://portal.s7news.net/InsertNews" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Category_News">
+      <soap12:operation soapAction="http://portal.s7news.net/Category_News" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommentedNews">
+      <soap12:operation soapAction="http://portal.s7news.net/CommentedNews" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNews">
+      <soap12:operation soapAction="http://portal.s7news.net/GetNews" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://portal.s7news.net/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRegister">
+      <soap12:operation soapAction="http://portal.s7news.net/UserRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VIPRegister">
+      <soap12:operation soapAction="http://portal.s7news.net/VIPRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ID">
+      <soap12:operation soapAction="http://portal.s7news.net/Get_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_Comment">
+      <soap12:operation soapAction="http://portal.s7news.net/Add_Comment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FollowedVIP_News">
+      <soap12:operation soapAction="http://portal.s7news.net/FollowedVIP_News" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Follow_VIP">
+      <soap12:operation soapAction="http://portal.s7news.net/Follow_VIP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mining_Table">
+      <soap12:operation soapAction="http://portal.s7news.net/Mining_Table" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Evaluation">
+      <soap12:operation soapAction="http://portal.s7news.net/Evaluation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_UserInfo">
+      <soap12:operation soapAction="http://portal.s7news.net/Get_UserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApproveVIP">
+      <soap12:operation soapAction="http://portal.s7news.net/ApproveVIP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Most_Viewed">
+      <soap12:operation soapAction="http://portal.s7news.net/Most_Viewed" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_All_VIPs">
+      <soap12:operation soapAction="http://portal.s7news.net/Get_All_VIPs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_VIP_News">
+      <soap12:operation soapAction="http://portal.s7news.net/Get_VIP_News" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_VIP_News">
+      <soap12:operation soapAction="http://portal.s7news.net/Mobile_VIP_News" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Followed_VIPs">
+      <soap12:operation soapAction="http://portal.s7news.net/Followed_VIPs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Related_VID">
+      <soap12:operation soapAction="http://portal.s7news.net/Related_VID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Edit_Private_Security">
+      <soap12:operation soapAction="http://portal.s7news.net/Edit_Private_Security" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Edit_VIP_Info">
+      <soap12:operation soapAction="http://portal.s7news.net/Edit_VIP_Info" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Unfollow">
+      <soap12:operation soapAction="http://portal.s7news.net/Unfollow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Unseen_News">
+      <soap12:operation soapAction="http://portal.s7news.net/Unseen_News" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="User_Unseen_News">
+      <soap12:operation soapAction="http://portal.s7news.net/User_Unseen_News" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NoComment">
+      <soap12:operation soapAction="http://portal.s7news.net/NoComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Read">
+      <soap12:operation soapAction="http://portal.s7news.net/Read" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadPhoto">
+      <soap12:operation soapAction="http://portal.s7news.net/UploadPhoto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicesHttpGet" type="tns:ServicesHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Category_News">
+      <http:operation location="/Category_News" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommentedNews">
+      <http:operation location="/CommentedNews" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNews">
+      <http:operation location="/GetNews" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <http:operation location="/Login" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRegister">
+      <http:operation location="/UserRegister" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VIPRegister">
+      <http:operation location="/VIPRegister" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ID">
+      <http:operation location="/Get_ID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_Comment">
+      <http:operation location="/Add_Comment" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="FollowedVIP_News">
+      <http:operation location="/FollowedVIP_News" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Follow_VIP">
+      <http:operation location="/Follow_VIP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Mining_Table">
+      <http:operation location="/Mining_Table" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Evaluation">
+      <http:operation location="/Evaluation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_UserInfo">
+      <http:operation location="/Get_UserInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApproveVIP">
+      <http:operation location="/ApproveVIP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Most_Viewed">
+      <http:operation location="/Most_Viewed" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_All_VIPs">
+      <http:operation location="/Get_All_VIPs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_VIP_News">
+      <http:operation location="/Get_VIP_News" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_VIP_News">
+      <http:operation location="/Mobile_VIP_News" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Followed_VIPs">
+      <http:operation location="/Followed_VIPs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Related_VID">
+      <http:operation location="/Related_VID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Edit_Private_Security">
+      <http:operation location="/Edit_Private_Security" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Edit_VIP_Info">
+      <http:operation location="/Edit_VIP_Info" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Unfollow">
+      <http:operation location="/Unfollow" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Unseen_News">
+      <http:operation location="/Unseen_News" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="User_Unseen_News">
+      <http:operation location="/User_Unseen_News" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NoComment">
+      <http:operation location="/NoComment" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Read">
+      <http:operation location="/Read" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="UploadPhoto">
+      <http:operation location="/UploadPhoto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicesHttpPost" type="tns:ServicesHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Category_News">
+      <http:operation location="/Category_News" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommentedNews">
+      <http:operation location="/CommentedNews" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNews">
+      <http:operation location="/GetNews" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <http:operation location="/Login" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRegister">
+      <http:operation location="/UserRegister" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VIPRegister">
+      <http:operation location="/VIPRegister" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ID">
+      <http:operation location="/Get_ID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_Comment">
+      <http:operation location="/Add_Comment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="FollowedVIP_News">
+      <http:operation location="/FollowedVIP_News" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Follow_VIP">
+      <http:operation location="/Follow_VIP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Mining_Table">
+      <http:operation location="/Mining_Table" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Evaluation">
+      <http:operation location="/Evaluation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_UserInfo">
+      <http:operation location="/Get_UserInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApproveVIP">
+      <http:operation location="/ApproveVIP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Most_Viewed">
+      <http:operation location="/Most_Viewed" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_All_VIPs">
+      <http:operation location="/Get_All_VIPs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_VIP_News">
+      <http:operation location="/Get_VIP_News" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_VIP_News">
+      <http:operation location="/Mobile_VIP_News" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Followed_VIPs">
+      <http:operation location="/Followed_VIPs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Related_VID">
+      <http:operation location="/Related_VID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Edit_Private_Security">
+      <http:operation location="/Edit_Private_Security" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Edit_VIP_Info">
+      <http:operation location="/Edit_VIP_Info" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Unfollow">
+      <http:operation location="/Unfollow" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Unseen_News">
+      <http:operation location="/Unseen_News" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="User_Unseen_News">
+      <http:operation location="/User_Unseen_News" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NoComment">
+      <http:operation location="/NoComment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Read">
+      <http:operation location="/Read" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="UploadPhoto">
+      <http:operation location="/UploadPhoto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Services">
+    <wsdl:port name="ServicesSoap" binding="tns:ServicesSoap">
+      <soap:address location="http://portal.s7news.net/Services.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicesSoap12" binding="tns:ServicesSoap12">
+      <soap12:address location="http://portal.s7news.net/Services.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicesHttpGet" binding="tns:ServicesHttpGet">
+      <http:address location="http://portal.s7news.net/Services.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicesHttpPost" binding="tns:ServicesHttpPost">
+      <http:address location="http://portal.s7news.net/Services.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
