@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="StyleSheet_02.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="main">
+        <table cellspacing="15px" style="background-color:#DDD;width:100%"><tr>
+        <td><a href="http://apps.facebook.com/talkcloudapp/" target="_top">Home</a></td>
+        <td><a href="http://apps.facebook.com/aspdotnetsample/Features.aspx" target="_top">Application</a></td>
+        <td style="width:100%"><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=248265051870598&amp;xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Talk-cloud/231341703569227" send="true" width="450" show_faces="true" action="like" font=""></fb:like>
+</td>
+        </tr></table>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

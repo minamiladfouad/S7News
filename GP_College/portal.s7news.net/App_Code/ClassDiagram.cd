@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="News">
+    <Position X="10.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAEBARAAHFCIAIARQAAAFEQAEAABAAAAIAAAAAEA=</HashCode>
+      <FileName>App_Code\News.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server">
+    <Position X="1.25" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAACAAEAAAgIAAAAAEAAAAAA=</HashCode>
+      <FileName>App_Code\Server.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Source">
+    <Position X="4.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEEABAAAAAAAIAAACAAMAAAAAAAAAAiAAAAAAEA=</HashCode>
+      <FileName>App_Code\Source.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Yallakora">
+    <Position X="2.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\Yallakora.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Filgoal">
+    <Position X="4.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\Filgoal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Youm7">
+    <Position X="6" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\Youm7.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Arabia">
+    <Position X="8" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\Arabia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Elshrok">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAIAQAAAAAABAAAAABAAAA=</HashCode>
+      <FileName>App_Code\Elshrok.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Masrawy">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>App_Code\Masrawy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

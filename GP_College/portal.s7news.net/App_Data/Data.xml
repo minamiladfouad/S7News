@@ -1,0 +1,1348 @@
+﻿<get-channels-ok >
+  <channel-info cid="room:1010@localhost">
+    <roomid>1010</roomid>
+    <name>CalcFrame11:CalcFrame1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>0</order>
+    <creator>gasser</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1001@localhost">
+    <roomid>1001</roomid>
+    <name>
+      Sticky_Notes_Note_Window11:Sticky_Notes_Note_Window1
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>1</order>
+    <creator>gasser</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1002@localhost">
+    <roomid>1002</roomid>
+    <name>wndclass_desked_gsk11:wndclass_desked_gsk1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>2</order>
+    <creator>gasser</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1003@localhost">
+    <roomid>1003</roomid>
+    <name>
+      {1C03B488-D53B-4a81-97F8-754559640193}11:{1C03B488-D53B-4a81-97F
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>3</order>
+    <creator>ahmed</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1004@localhost">
+    <roomid>1004</roomid>
+    <name>Power Point11:Power Point1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>4</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1005@localhost">
+    <roomid>1005</roomid>
+    <name>OpusApp11:OpusApp1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>5</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1006@localhost">
+    <roomid>1006</roomid>
+    <name>BuddyWindow11:BuddyWindow1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>6</order>
+    <creator>gasser</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1007@localhost">
+    <roomid>1007</roomid>
+    <name>MsoSplash11:MsoSplash1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>7</order>
+    <creator>ahmed</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1008@localhost">
+    <roomid>1008</roomid>
+    <name>
+      Afx_00400000_b_00010003_00000006_02880AD111:Afx_00400000_b_00010
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>8</order>
+    <creator>aaaa</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1009@localhost">
+    <roomid>1009</roomid>
+    <name>Search00:yahoo.com</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>9</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1011@localhost">
+    <roomid>1011</roomid>
+    <name>
+      Afx_00400000_b_00010003_00000006_000608B711:Afx_00400000_b_00010
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>10</order>
+    <creator>aaaa</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1012@localhost">
+    <roomid>1012</roomid>
+    <name>Notepad11:Notepad1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>11</order>
+    <creator>aaaa</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1013@localhost">
+    <roomid>1013</roomid>
+    <name>Blank Screen Saver11:Blank Screen Saver1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>12</order>
+    <creator>aaaa</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1014@localhost">
+    <roomid>1014</roomid>
+    <name>SALFRAME11:SALFRAME1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>13</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1015@localhost">
+    <roomid>1015</roomid>
+    <name>tSkMainForm11:tSkMainForm1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>14</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1016@localhost">
+    <roomid>1016</roomid>
+    <name>WinRarWindow11:WinRarWindow1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>15</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1017@localhost">
+    <roomid>1017</roomid>
+    <name>cnn.com00:cnn.com</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>16</order>
+    <creator>aaaa</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1018@localhost">
+    <roomid>1018</roomid>
+    <name>TConversationForm11:TConversationForm1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>17</order>
+    <creator>ahmed</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1019@localhost">
+    <roomid>1019</roomid>
+    <name>Search00:egypt</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>18</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1020@localhost">
+    <roomid>1020</roomid>
+    <name>YahooBuddyMain11:YahooBuddyMain1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>19</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1021@localhost">
+    <roomid>1021</roomid>
+    <name>rctrl_renwnd3211:rctrl_renwnd321</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>20</order>
+    <creator>ahmed</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1022@localhost">
+    <roomid>1022</roomid>
+    <name>
+      Microsoft-Windows-Tablet-SnipperToolbar11:Microsoft-Windows-Tabl
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>21</order>
+    <creator>ahmed</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1023@localhost">
+    <roomid>1023</roomid>
+    <name>WMP Skin Host11:WMP Skin Host1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>22</order>
+    <creator>ahmed</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1024@localhost">
+    <roomid>1024</roomid>
+    <name>bbc.com00:bbc.com</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>23</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1025@localhost">
+    <roomid>1025</roomid>
+    <name>Flash1111:Flash111</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>24</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1026@localhost">
+    <roomid>1026</roomid>
+    <name>
+      Afx_00400000_8_00010003_00000000_00060B5511:Afx_00400000_8_00010
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>25</order>
+    <creator>ahmed</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1027@localhost">
+    <roomid>1027</roomid>
+    <name>WMPlayerApp11:WMPlayerApp1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>26</order>
+    <creator>ahmed</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1028@localhost">
+    <roomid>1028</roomid>
+    <name>
+      w3schools.com00:w3schools.com/webservices/ws_example.asp
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>27</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1029@localhost">
+    <roomid>1029</roomid>
+    <name>w3schools.com00:w3schools.com</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>28</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1030@localhost">
+    <roomid>1030</roomid>
+    <name>Search00:google.com</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>29</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1031@localhost">
+    <roomid>1031</roomid>
+    <name>aljazeera.net00:aljazeera.net</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>30</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1032@localhost">
+    <roomid>1032</roomid>
+    <name>Search00:facebook</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>31</order>
+    <creator>hany1</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1033@localhost">
+    <roomid>1033</roomid>
+    <name>OperaWindowClass11:OperaWindowClass1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>32</order>
+    <creator>Mazen</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1034@localhost">
+    <roomid>1034</roomid>
+    <name>SWFlash_PlaceholderX11:SWFlash_PlaceholderX1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>33</order>
+    <creator>Mazen</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1035@localhost">
+    <roomid>1035</roomid>
+    <name>facebook.com00:facebook.com</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>34</order>
+    <creator>Horashy</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1036@localhost">
+    <roomid>1036</roomid>
+    <name>GVBSetupInit11:GVBSetupInit1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>35</order>
+    <creator>mo</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1037@localhost">
+    <roomid>1037</roomid>
+    <name>fayoum.edu.eg00:fayoum.edu.eg</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>36</order>
+    <creator>Star</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1038@localhost">
+    <roomid>1038</roomid>
+    <name>
+      Photo_Lightweight_Viewer11:Photo_Lightweight_Viewer1
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>37</order>
+    <creator>Horashy</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1039@localhost">
+    <roomid>1039</roomid>
+    <name>arabseed.com00:arabseed.com/ar/home.html</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>38</order>
+    <creator>Turkey</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1040@localhost">
+    <roomid>1040</roomid>
+    <name>MozillaUIWindowClass11:MozillaUIWindowClass1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>39</order>
+    <creator>TATES</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1041@localhost">
+    <roomid>1041</roomid>
+    <name>Search00:fayoum.edu.eg</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>40</order>
+    <creator>Horashy</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1042@localhost">
+    <roomid>1042</roomid>
+    <name>about:blank00:about:blank</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>41</order>
+    <creator>mo</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1043@localhost">
+    <roomid>1043</roomid>
+    <name>ShockwaveFlash11:ShockwaveFlash1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>42</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1044@localhost">
+    <roomid>1044</roomid>
+    <name>myegy.com00:myegy.com</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>43</order>
+    <creator>m.yousef</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1045@localhost">
+    <roomid>1045</roomid>
+    <name>search.bearshare.com00:search.bearshare.com</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>44</order>
+    <creator>TATES</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1046@localhost">
+    <roomid>1046</roomid>
+    <name>Button11:Button1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>45</order>
+    <creator>mo</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1047@localhost">
+    <roomid>1047</roomid>
+    <name>gcdawp.com00:gcdawp.com/main en.html</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>46</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1048@localhost">
+    <roomid>1048</roomid>
+    <name>WordPadClass11:WordPadClass1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>47</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1049@localhost">
+    <roomid>1049</roomid>
+    <name>Search00:cairo+egypt</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>48</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1050@localhost">
+    <roomid>1050</roomid>
+    <name>Search00:cairo</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>49</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1051@localhost">
+    <roomid>1051</roomid>
+    <name>NUIDialog11:NUIDialog1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>50</order>
+    <creator>A-Nasr</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1052@localhost">
+    <roomid>1052</roomid>
+    <name>Search00:xnxx</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>51</order>
+    <creator>I8</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1053@localhost">
+    <roomid>1053</roomid>
+    <name>twitter.com00:twitter.com</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>52</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1054@localhost">
+    <roomid>1054</roomid>
+    <name>Search00:sex</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>53</order>
+    <creator>I8</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1055@localhost">
+    <roomid>1055</roomid>
+    <name>ftp:00:ftp://talkcloud.me</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>54</order>
+    <creator>I8</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1056@localhost">
+    <roomid>1056</roomid>
+    <name>
+      du109w.dub109.mail.live.com00:du109w.dub109.mail.live.com/defaul
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>55</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1057@localhost">
+    <roomid>1057</roomid>
+    <name>MSPaintApp11:MSPaintApp1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>56</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1058@localhost">
+    <roomid>1058</roomid>
+    <name>egypt.msn.com00:egypt.msn.com/?c=eg</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>57</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1059@localhost">
+    <roomid>1059</roomid>
+    <name>Search00:hi</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>58</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1060@localhost">
+    <roomid>1060</roomid>
+    <name>masrawy.com00:masrawy.com</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>59</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1061@localhost">
+    <roomid>1061</roomid>
+    <name>
+      du107w.dub107.mail.live.com00:du107w.dub107.mail.live.com/mail/i
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>60</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1062@localhost">
+    <roomid>1062</roomid>
+    <name>
+      svu.edu.eg00:svu.edu.eg/arabic/links/management/nabsa.htm
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>61</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1063@localhost">
+    <roomid>1063</roomid>
+    <name>
+      DroverLord - Window Class11:DroverLord - Window Class1
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>62</order>
+    <creator>ahmed</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1064@localhost">
+    <roomid>1064</roomid>
+    <name>QVMainFrame-ACDSeePro3011:QVMainFrame-ACDSeePro301</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>63</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1065@localhost">
+    <roomid>1065</roomid>
+    <name>GomPlayer1.x11:GomPlayer1.x1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>64</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1066@localhost">
+    <roomid>1066</roomid>
+    <name>TfrmQuestionnaire11:TfrmQuestionnaire1</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>65</order>
+    <creator>A-Nasr</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1067@localhost">
+    <roomid>1067</roomid>
+    <name>Search00:emoticon</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>66</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1068@localhost">
+    <roomid>1068</roomid>
+    <name>Search00:california</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>67</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1069@localhost">
+    <roomid>1069</roomid>
+    <name>Power Point10:Printing Slides</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>68</order>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1070@localhost">
+    <roomid>1070</roomid>
+    <name>Power Point10:Creating a Watermark</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>69</order>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1071@localhost">
+    <roomid>1071</roomid>
+    <name>Power Point10:Changing Background</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>70</order>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1072@localhost">
+    <roomid>1072</roomid>
+    <name>Power Point10:Changing All Fonts</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>71</order>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1073@localhost">
+    <roomid>1073</roomid>
+    <name>Power Point10:Aligning Text</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>72</order>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1074@localhost">
+    <roomid>1074</roomid>
+    <name>Power Point10:Hyperlink</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>73</order>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1075@localhost">
+    <roomid>1075</roomid>
+    <name>Power Point10:Default Font</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>74</order>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1076@localhost">
+    <roomid>1076</roomid>
+    <name>Power Point10:Effective Presentation</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>75</order>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1077@localhost">
+    <roomid>1077</roomid>
+    <name>XLMAIN11:XLMAIN</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>76</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1078@localhost">
+    <roomid>1078</roomid>
+    <name>Search00:califonria</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>77</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1079@localhost">
+    <roomid>1079</roomid>
+    <name>Search00:techwadi</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>78</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1080@localhost">
+    <roomid>1080</roomid>
+    <name>
+      Afx_00400000_b_00010003_00000006_00AB0B7711:Afx_00400000_b_00010
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>79</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1081@localhost">
+    <roomid>1081</roomid>
+    <name>
+      Afx_00400000_b_00010003_00000006_01EE089B11:Afx_00400000_b_00010
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>80</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1082@localhost">
+    <roomid>1082</roomid>
+    <name>
+      Afx_00400000_b_00010003_00000006_006C08CF11:Afx_00400000_b_00010
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>81</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1083@localhost">
+    <roomid>1083</roomid>
+    <name>CalcFrame10:Claculator new room</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>82</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1084@localhost">
+    <roomid>1084</roomid>
+    <name>msseces_class11:msseces_class</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>83</order>
+    <creator>Ahmed Hashem</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1085@localhost">
+    <roomid>1085</roomid>
+    <name>goal.com00:goal.com/ar-eg</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>84</order>
+    <creator>ahmed hashem</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1086@localhost">
+    <roomid>1086</roomid>
+    <name>
+      tSkMainForm.UnicodeClass11:tSkMainForm.UnicodeClass
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>85</order>
+    <creator>hona</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1087@localhost">
+    <roomid>1087</roomid>
+    <name>
+      TConversationForm.UnicodeClass11:TConversationForm.UnicodeClass
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>86</order>
+    <creator>hona</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1088@localhost">
+    <roomid>1088</roomid>
+    <name>Search00:lebanon</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>87</order>
+    <creator>Cherif</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1089@localhost">
+    <roomid>1089</roomid>
+    <name>tSkMainForm11:tSkMainForm</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>88</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1090@localhost">
+    <roomid>1090</roomid>
+    <name>Search00:ksa</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>89</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1091@localhost">
+    <roomid>1091</roomid>
+    <name>Search00:dammam</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>90</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1092@localhost">
+    <roomid>1092</roomid>
+    <name>Search00:powerpoint</name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>91</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1093@localhost">
+    <roomid>1093</roomid>
+    <name>
+      Afx_00400000_b_00010003_00000006_01440A4F11:Afx_00400000_b_00010
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>92</order>
+    <creator>cccc</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+  <channel-info cid="room:1094@localhost">
+    <roomid>1094</roomid>
+    <name>
+      Afx_00400000_b_00010003_00000006_0171074711:Afx_00400000_b_00010
+    </name>
+    <type>1</type>
+    <parentid>-1</parentid>
+    <order>93</order>
+    <creator>User1</creator>
+    <closed>false</closed>
+    <need-password>false</need-password>
+    <private>false</private>
+    <user-count>0</user-count>
+    <file-upload enabled="true" upload="true"/>
+    <av-upload enabled="true" upload="true"/>
+  </channel-info>
+</get-channels-ok>

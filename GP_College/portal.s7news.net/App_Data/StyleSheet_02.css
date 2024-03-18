@@ -1,0 +1,7 @@
+﻿*{margin:0;padding:0}
+body { font-family: Segoe UI; font-size:13px}
+a:visited,a{color:#06C;}
+div#main{margin:10px}
+p{margin-top:5px;margin-bottom:13px; line-height:25px;}
+div.yellowbox{border:1px solid #E6DA02;background-color:#FFC;margin-bottom:20px;padding:10px;}
+div.bluebox{background-color:#ecf5fb;border:solid 1px #599cd4;padding:10px;}
